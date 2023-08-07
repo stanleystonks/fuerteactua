@@ -338,7 +338,7 @@ footer a {
     /* Wave header */
     .wave {
         background: url('./vectors/mobile_header_vector.svg') no-repeat center/contain;
-        aspect-ratio: 463/184;
+        aspect-ratio: 463/183;
         
         justify-content: space-between;
         align-items: end;
