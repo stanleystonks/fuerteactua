@@ -1,0 +1,591 @@
+@import url("https://use.typekit.net/xrw2yvk.css");
+
+/* Variables */
+:root {
+    --logo-grey: #F0EFF0;
+    --logo-black: #121112;
+    --black-6: #1F1E1F;
+    --logo-white-white: #FFF;
+    --accentorange: #E54800;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+.hidden-visibility {
+    visibility: hidden;
+}
+
+/* Global settings */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'azo-sans-web', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+
+    min-height: 100vh;
+
+    /* Global grid */
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "contact"
+        "footer"
+}
+
+/* Header */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+        "wave"
+        "video"
+}
+
+.wave {
+    grid-area: wave;
+    background: url('./vectors/header_vector.svg') no-repeat center/contain;
+    aspect-ratio: 1440/209;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.motto {
+    flex: 1;
+    max-width: 25.5vw;
+    margin-bottom: 2.25vw;
+
+    color: var(--logo-grey, #F0EFF0);
+    font-size: 1.375vw;
+ 
+    font-weight: 350;
+}
+
+.lang-icon {
+    margin-right: 11.75vw;
+    margin-bottom: 2.25vw;
+    width: 2.75vw;
+    background: url('./vectors/language_icon.svg') no-repeat center/contain;
+    aspect-ratio: 41/38;
+
+    cursor: pointer;
+
+    transition: opacity 270ms;
+}
+
+.lang-icon:hover {
+    opacity: 0.8;
+}
+
+.lang-icon:active {
+    opacity: 0.5;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+
+    list-style: none;
+
+    background: var(--logo-grey);
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 2rem;
+    margin-top: 2vw;
+    padding: 0.5rem;
+
+    transform: translateX(-2vw);
+
+    transition: opacity .15s ease-out;
+}
+
+.has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    margin: 0 0.5vw;
+}
+
+.dropdown a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--black-6);
+    font-weight: 700;
+
+    transition: color 270ms;
+}
+
+.dropdown a:hover {
+    color: var(--accentorange);
+}
+
+/* Video */
+
+video {
+    grid-area: video;
+    width: 100%;
+}
+
+/* Main */
+main {
+    grid-area: main;
+}
+
+.main-section {
+    position: relative;
+    bottom: 5vw;
+
+    width: 82vw;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: var(--logo-grey);
+    max-width: 35vw;
+    padding: 5vw;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Text */
+h2 {
+    color: var(--logo-black, #121112);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2.5vw;
+}
+
+p {
+    color: var(--logo-black, #121112);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    margin-bottom: 1.5vw;
+}
+
+/* Buttons */
+.button  {
+    height: 4.5rem;
+
+    text-decoration: none;
+
+    cursor: pointer;
+    margin: auto;
+    padding: 0.85vw 1vw;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.07), 3px 3px 3px 0px rgba(0, 0, 0, 0.05), 5px 5px 5px 0px rgba(255, 255, 255, 0.04) inset, 3px 3px 3px 0px rgba(252, 252, 252, 0.08) inset;
+
+    transition: opacity 270ms;
+}
+
+/* Button pseudo-classes */
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    opacity: 0.5;
+}
+
+/* Individual buttons */
+.call-button  {
+    background: var(--black-6, #1F1E1F);
+}
+
+.download-button  {
+    background: var(--logo-white-white, #FFF);
+}
+
+/* Main icons */
+.icon {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+}
+
+.phone-icon {
+    background: url('./vectors/phone_icon.svg') no-repeat center/contain;
+}
+
+.catalogue-icon {
+    background: url('./vectors/catalogue_icon.svg') no-repeat center/contain;
+}
+
+/* Links */
+.button span {
+    position: relative;
+    top: 0.2rem;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+
+    margin-left: 1rem;
+}
+
+.call-us {
+    color: var(--logo-grey, #F0EFF0);
+}
+
+.download {
+    color: var(--black-6, #1F1E1F);
+}
+
+/* Contact */
+.contact-section {
+    grid-area: contact;
+    margin-bottom: 6vw;
+
+    height: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contact cards */
+.contact-card {
+    min-height: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-card p {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+}
+
+/* Contact icons */
+.small-icon {
+    width: 1.5rem;
+    aspect-ratio: 1 / 1;
+}
+
+.phone-icon2 {
+    background: url('./vectors/phone_icon2.svg') no-repeat center/contain;
+}
+
+.email-icon {
+    background: url('./vectors/email_icon.svg') no-repeat center/contain;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background: url('./vectors/bottom_wave.svg') no-repeat center/contain;
+    aspect-ratio: 1440/162;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 2vw;
+}
+
+footer > * {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 5vw;
+}
+
+footer p {
+    color: var(--logo-grey, #F0EFF0);
+}
+
+footer a {
+    color: var(--accentorange, #E54800);
+    text-decoration: none;
+}
+
+/* Phone styles */
+@media only screen and (max-width: 480px) {
+    
+    /* Wave header */
+    .wave {
+        background: url('./vectors/mobile_header_vector.svg') no-repeat center/contain;
+        aspect-ratio: 464/184;
+        
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    /* Motto */
+    .motto {
+        width: 25vw;
+        margin-bottom: 3vw;
+        margin-left: 12.5vw;
+    
+        font-size: 0.7rem;
+    }
+
+    /* Language icon */
+    .lang-icon {
+        margin-right: 18vw;
+        margin-bottom: 4vw;
+        width: 5vw;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+        margin-top: 4vw;
+        padding: 0.5rem;
+    
+        transform: translateX(-7vw);
+    }
+    
+    .dropdown-item {
+        margin: 0 1vw;
+    }
+
+    .dropdown a:hover {
+        color:var(--accentorange);
+    }
+
+    /* Main section */
+    .main-section {
+        bottom: 0vw;
+    
+        width: 100vw;
+
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        min-width: 100vw;
+        padding: 8vw;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .services {
+        background: var(--logo-white-white);
+    }
+
+    .artists {
+        position: relative;
+        bottom: 10vw;
+    }
+    
+    /* Text */
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 8vw;
+    }
+
+    .artists h2 {
+        margin-top: 10vw;
+    }
+    
+    p {
+        line-height: 1.5rem;
+        margin-bottom: 4vw;
+    }
+    
+    /* Buttons */
+    .button  {
+        height: 3rem;
+        padding: 0.85vw 3vw;
+
+        position: relative;
+        top: 4vw;
+
+        z-index: 2;
+    }
+
+    .button span {
+        font-size: 1.5rem;
+        top: 0.1rem;
+    }
+
+    /* Main icons */
+    .icon {
+        width: 1.5rem;
+    }
+
+    /* Reorder artists section */
+    .artists img {
+        display: block;
+        order: 1;
+    }
+
+    .artists p {
+        order: 3;
+    }
+
+    .download-button {
+        order: 2;
+        top: 10vw;
+        margin-bottom: 20vw;
+    }
+
+    /* Contact section */
+    .contact-section {
+        margin-bottom: 5vw;
+    
+        height: 15vw;
+
+        align-items: flex-start;
+    }
+    
+    /* Contact cards */
+    .contact-card {
+        min-height: 1.5rem;
+        margin-left: 8vw;
+    }
+    
+    .contact-card p {
+        font-size: 1rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* Contact icons */
+    .small-icon {
+        width: 1rem;
+    }
+
+    /* Footer section */
+
+    footer {
+        background: url('./vectors/mobile_bottom_wave.svg') no-repeat center/contain;
+        aspect-ratio: 370/162;
+    }
+
+    footer > * {
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin: 0 5vw 5vw 5vw;
+
+        max-width: 50vw;
+        line-height: normal;
+    }
+}
+
+
+/* Tablet styles */
+@media only screen and (min-width: 481px) and (max-width: 965px) {
+    /* Motto */
+    .motto {
+        width: 25vw;
+        margin-bottom: 2.5vw;
+        margin-left: 11vw;
+    
+        font-size: 0.8rem;
+    }
+
+    /* Language icon */
+    .lang-icon {
+        margin-right: 12vw;
+        margin-bottom: 2.5vw;
+    }
+
+    /* Dropdown */
+    .dropdown {
+        transform: translateX(-3vw);
+    }
+
+
+    /* Main section */
+
+    .card {
+        padding: 4.5vw;
+        max-width: 37vw;
+    }
+
+    /* Text */
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 5vw;
+    }
+        
+    p {
+        line-height: 1.5rem;
+        margin-bottom: 3vw;
+    }
+        
+    /* Buttons */
+    .button  {
+        height: 3rem;
+        padding: 0.85vw 3vw;
+    }
+    
+    .button span {
+        font-size: 1rem;
+        top: 0.1rem;
+    }
+    
+    /* Main icons */
+    .icon {
+        width: 1.5rem;
+    }
+
+
+    /* Contact section */
+    .contact-section {
+        margin-bottom: 5vw;
+        height: 7vw;
+    }
+    
+    /* Contact cards */
+    .contact-card {
+        min-height: 1.5rem;
+    }
+    
+    .contact-card p {
+        font-size: 1rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* Contact icons */
+    .small-icon {
+        width: 1rem;
+    }
+
+    /* Footer */
+    footer > * {
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin: 0 5vw 0.5vw 5vw;
+
+        max-width: 50vw;
+        line-height: normal;
+    }
+}
+  
