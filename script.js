@@ -6,8 +6,7 @@ elementsToModify.forEach(element => {
     element.dataset.esText = element.innerText;
 });
 
-function changeLanguage(event) {
-    // const languageChoice = event.target.innerText.toLowerCase();
+function changeLanguage() {
     if (html.lang === 'es') {
         elementsToModify.forEach(element => {
             const langKey = `enText`;
