@@ -372,6 +372,10 @@ footer a {
         margin: 0 1vw;
     }
 
+    .dropdown-item a {
+        font-size: 1.5rem;
+    }
+
     .dropdown a:hover {
         color:var(--accentorange);
     }
