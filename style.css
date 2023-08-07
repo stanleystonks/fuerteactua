@@ -95,7 +95,7 @@ header {
 
 /* Dropdown menu */
 
-.dropdown {
+/* .dropdown {
     position: absolute;
     opacity: 0;
     z-index: 2;
@@ -138,13 +138,13 @@ header {
 
 .dropdown a:hover {
     color: var(--accentorange);
-}
+} */
 
 /* Video */
 
 video {
     grid-area: video;
-    width: 100%;
+    width: 100vw;
 }
 
 /* Main */
@@ -165,14 +165,14 @@ main {
 
 .card {
     background-color: var(--logo-grey);
-    max-width: 35vw;
+    width: 35vw;
     padding: 5vw;
 
     border-radius: 5px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 /* Text */
@@ -198,7 +198,7 @@ p {
     text-decoration: none;
 
     cursor: pointer;
-    margin: auto;
+    margin: 0 auto;
     padding: 0.85vw 1vw;
 
     display: inline-flex;
@@ -338,7 +338,7 @@ footer a {
     /* Wave header */
     .wave {
         background: url('./vectors/mobile_header_vector.svg') no-repeat center/contain;
-        aspect-ratio: 464/184;
+        aspect-ratio: 463/184;
         
         justify-content: space-between;
         align-items: end;
@@ -361,7 +361,7 @@ footer a {
     }
 
     /* Dropdown menu */
-    .dropdown {
+    /* .dropdown {
         margin-top: 4vw;
         padding: 0.5rem;
     
@@ -374,7 +374,7 @@ footer a {
 
     .dropdown-item a {
         font-size: 1.5rem;
-    }
+    } */
 
     /* Main section */
     .main-section {
@@ -392,7 +392,7 @@ footer a {
     
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .services {
@@ -485,7 +485,7 @@ footer a {
 
     footer {
         background: url('./vectors/mobile_bottom_wave.svg') no-repeat center/contain;
-        aspect-ratio: 370/162;
+        aspect-ratio: 370/168;
     }
 
     footer > * {
@@ -517,16 +517,15 @@ footer a {
     }
 
     /* Dropdown */
-    .dropdown {
+    /* .dropdown {
         transform: translateX(-3vw);
-    }
+    } */
 
 
     /* Main section */
 
     .card {
         padding: 4.5vw;
-        max-width: 37vw;
     }
 
     /* Text */

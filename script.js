@@ -1,4 +1,4 @@
-const langButtons = document.querySelectorAll('.lang');
+const langButton = document.querySelector('.lang-icon');
 const elementsToModify = document.querySelectorAll('.element-to-modify');
 const html = document.querySelector('html');
 
@@ -6,26 +6,27 @@ elementsToModify.forEach(element => {
     element.dataset.esText = element.innerText;
 });
 
-function toggleLanguageBar(languageChoice) {
-    langButtons.forEach(button => {
-        button.classList.toggle('hidden', button.id === `lang-${languageChoice}`);
-    });
-}
-
 function changeLanguage(event) {
-    const languageChoice = event.target.innerText.toLowerCase();
-    html.lang = languageChoice;
-
-    // Update elements using languageChoice
-    elementsToModify.forEach(element => {
-        const langKey = `${languageChoice}Text`;
-        element.innerText = element.dataset[langKey];
-    });
-
-    // Toggle language bar
-    toggleLanguageBar(languageChoice);
+    // const languageChoice = event.target.innerText.toLowerCase();
+    if (html.lang === 'es') {
+        elementsToModify.forEach(element => {
+            const langKey = `enText`;
+            element.innerText = element.dataset[langKey];
+            html.lang = 'en';
+        });
+    } else if (html.lang === 'en') {
+        elementsToModify.forEach(element => {
+            const langKey = `deText`;
+            element.innerText = element.dataset[langKey];
+            html.lang = 'de';
+        });
+    } else {
+        elementsToModify.forEach(element => {
+            const langKey = `esText`;
+            element.innerText = element.dataset[langKey];
+            html.lang = 'es';
+        });
+    }
 }
 
-langButtons.forEach(button => {
-    button.addEventListener('click', changeLanguage);
-});
+langButton.addEventListener('click', changeLanguage);
