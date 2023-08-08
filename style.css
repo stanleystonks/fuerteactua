@@ -55,7 +55,7 @@ header {
 .wave {
     grid-area: wave;
     background: url('./vectors/header_vector.svg') no-repeat center/contain;
-    aspect-ratio: 1440/209;
+    aspect-ratio: 1441/210;
 
     display: flex;
     justify-content: flex-end;
@@ -151,7 +151,7 @@ header {
 
 .black-line {
     position: relative;
-    bottom: 10px;
+    bottom: 6px;
 
     height: 5vw;
     max-width: 100vw;
@@ -171,7 +171,7 @@ main {
 
 .main-section {
     position: relative;
-    bottom: 3vw;
+    bottom: 3.25vw;
 
     width: 82vw;
     margin: auto;
@@ -185,7 +185,7 @@ main {
     width: 35vw;
     padding: 5vw;
 
-    border-radius: 5px;
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
@@ -325,7 +325,7 @@ p {
 footer {
     grid-area: footer;
     background: url('./vectors/bottom_wave.svg') no-repeat center/contain;
-    aspect-ratio: 1440/162;
+    aspect-ratio: 1441/163;
 
     display: flex;
     justify-content: space-between;
@@ -349,10 +349,18 @@ footer a {
     text-decoration: none;
 }
 
+header, footer, main {
+    width: 100%;
+}
+
 
 
 /* Tablet styles */
 @media only screen and (min-width: 681px) and (max-width: 965px) {
+    .main-section {
+        bottom: 4vw;
+    }
+
     /* Motto */
     .motto {
         width: 25vw;
@@ -438,6 +446,10 @@ footer a {
         max-width: 50vw;
         line-height: normal;
     }
+
+    header, footer, main {
+        width: 100%;
+    }
 }
 
 /* Phone styles */
@@ -446,7 +458,7 @@ footer a {
     /* Wave header */
     .wave {
         background: url('./vectors/mobile_header_vector.svg') no-repeat center/contain;
-        aspect-ratio: 463/183;
+        aspect-ratio: 464/184;
         
         justify-content: space-between;
         align-items: end;
@@ -497,6 +509,8 @@ footer a {
     .card {
         width: 100%;
         padding: 8vw;
+
+        border-radius: 0;
     
         display: flex;
         flex-direction: column;
@@ -597,8 +611,10 @@ footer a {
     /* Footer section */
 
     footer {
+
+
         background: url('./vectors/mobile_bottom_wave.svg') no-repeat center/contain;
-        aspect-ratio: 390/168;
+        aspect-ratio: 391/169;
     }
 
     footer > * {
@@ -608,5 +624,13 @@ footer a {
 
         max-width: 50vw;
         line-height: normal;
+    }
+
+    header, footer, main {
+        width: 100%;
+    }
+
+    .black-line {
+        display: none;
     }
 }
