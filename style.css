@@ -141,10 +141,27 @@ header {
 } */
 
 /* Video */
+.video {
+    grid-area: video;
+    max-width: 100vw; 
+
+    position: relative;
+    bottom: 2px;
+}
+
+.black-line {
+    position: relative;
+    bottom: 10px;
+
+    height: 5vw;
+    max-width: 100vw;
+    background-color: var(--logo-black);
+}
 
 video {
-    grid-area: video;
-    width: 100vw;
+    width: 100%;
+    margin: 0;
+    /* overflow: hidden; */
 }
 
 /* Main */
@@ -154,7 +171,7 @@ main {
 
 .main-section {
     position: relative;
-    bottom: 5vw;
+    bottom: 3vw;
 
     width: 82vw;
     margin: auto;
@@ -332,175 +349,10 @@ footer a {
     text-decoration: none;
 }
 
-/* Phone styles */
-@media only screen and (max-width: 480px) {
-    
-    /* Wave header */
-    .wave {
-        background: url('./vectors/mobile_header_vector.svg') no-repeat center/contain;
-        aspect-ratio: 463/183;
-        
-        justify-content: space-between;
-        align-items: end;
-    }
-
-    /* Motto */
-    .motto {
-        width: 25vw;
-        margin-bottom: 3vw;
-        margin-left: 12.5vw;
-    
-        font-size: 0.7rem;
-    }
-
-    /* Language icon */
-    .lang-icon {
-        margin-right: 18vw;
-        margin-bottom: 4vw;
-        width: 5vw;
-    }
-
-    /* Dropdown menu */
-    /* .dropdown {
-        margin-top: 4vw;
-        padding: 0.5rem;
-    
-        transform: translateX(-7vw);
-    }
-    
-    .dropdown-item {
-        margin: 0 1vw;
-    }
-
-    .dropdown-item a {
-        font-size: 1.5rem;
-    } */
-
-    /* Main section */
-    .main-section {
-        bottom: 0vw;
-    
-        width: 100vw;
-
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .card {
-        min-width: 100vw;
-        padding: 8vw;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .services {
-        background: var(--logo-white-white);
-    }
-
-    .artists {
-        position: relative;
-        bottom: 10vw;
-    }
-    
-    /* Text */
-    h2 {
-        font-size: 1.25rem;
-        margin-bottom: 8vw;
-    }
-
-    .artists h2 {
-        margin-top: 10vw;
-    }
-    
-    p {
-        line-height: 1.5rem;
-        margin-bottom: 4vw;
-    }
-    
-    /* Buttons */
-    .button  {
-        height: 3rem;
-        padding: 0.85vw 3vw;
-
-        position: relative;
-        top: 4vw;
-
-        z-index: 2;
-    }
-
-    .button span {
-        font-size: 1.5rem;
-        top: 0.1rem;
-    }
-
-    /* Main icons */
-    .icon {
-        width: 1.5rem;
-    }
-
-    /* Reorder artists section */
-    .artists img {
-        display: block;
-        order: 1;
-    }
-
-    .artists p {
-        order: 3;
-    }
-
-    .download-button {
-        order: 2;
-        top: 10vw;
-        margin-bottom: 20vw;
-    }
-
-    /* Contact section */
-    .contact-section {
-        margin-bottom: 5vw;
-    
-        height: 15vw;
-
-        align-items: flex-start;
-    }
-    
-    /* Contact cards */
-    .contact-card {
-        min-height: 1.5rem;
-        margin-left: 8vw;
-    }
-    
-    .contact-card p {
-        font-size: 1rem;
-        margin-left: 0.25rem;
-    }
-    
-    /* Contact icons */
-    .small-icon {
-        width: 1rem;
-    }
-
-    /* Footer section */
-
-    footer {
-        background: url('./vectors/mobile_bottom_wave.svg') no-repeat center/contain;
-        aspect-ratio: 370/168;
-    }
-
-    footer > * {
-        font-size: 0.75rem;
-        font-weight: 400;
-        margin: 0 5vw 5vw 5vw;
-
-        max-width: 50vw;
-        line-height: normal;
-    }
-}
 
 
 /* Tablet styles */
-@media only screen and (min-width: 481px) and (max-width: 965px) {
+@media only screen and (min-width: 681px) and (max-width: 965px) {
     /* Motto */
     .motto {
         width: 25vw;
@@ -587,4 +439,174 @@ footer a {
         line-height: normal;
     }
 }
-  
+
+/* Phone styles */
+@media only screen and (max-width: 680px) {
+    
+    /* Wave header */
+    .wave {
+        background: url('./vectors/mobile_header_vector.svg') no-repeat center/contain;
+        aspect-ratio: 463/183;
+        
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    /* Motto */
+    .motto {
+        width: 25vw;
+        margin-bottom: 3vw;
+        margin-left: 12.5vw;
+    
+        font-size: 0.7rem;
+    }
+
+    /* Language icon */
+    .lang-icon {
+        margin-right: 18vw;
+        margin-bottom: 4vw;
+        width: 5vw;
+    }
+
+    /* Dropdown menu */
+    /* .dropdown {
+        margin-top: 4vw;
+        padding: 0.5rem;
+    
+        transform: translateX(-7vw);
+    }
+    
+    .dropdown-item {
+        margin: 0 1vw;
+    }
+
+    .dropdown-item a {
+        font-size: 1.5rem;
+    } */
+
+    /* Main section */
+    .main-section {
+        bottom: 0vw;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        padding: 8vw;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .services {
+        background: var(--logo-white-white);
+    }
+
+    .artists {
+        position: relative;
+        bottom: 10vw;
+    }
+    
+    /* Text */
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 8vw;
+    }
+
+    .artists h2 {
+        margin-top: 10vw;
+    }
+    
+    p {
+        line-height: 1.5rem;
+        margin-bottom: 4vw;
+    }
+    
+    /* Buttons */
+    .button  {
+        height: 3rem;
+        padding: 0.85vw 3vw;
+
+        position: relative;
+        top: 4vw;
+
+        z-index: 2;
+    }
+
+    .button span {
+        font-size: 1.5rem;
+        top: 0.1rem;
+    }
+
+    /* Main icons */
+    .icon {
+        width: 1.5rem;
+    }
+
+    /* Reorder artists section */
+    .img {
+        display: block;
+        max-width: 100vw;
+        order: 1;
+    }
+
+    .artists img {
+        width: 100%;
+    }
+
+    .artists p {
+        order: 3;
+    }
+
+    .download-button {
+        order: 2;
+        top: 10vw;
+        margin-bottom: 20vw;
+    }
+
+    /* Contact section */
+    .contact-section {
+        margin-bottom: 5vw;
+    
+        height: 15vw;
+
+        align-items: flex-start;
+    }
+    
+    /* Contact cards */
+    .contact-card {
+        min-height: 1.5rem;
+        margin-left: 8vw;
+    }
+    
+    .contact-card p {
+        font-size: 1rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* Contact icons */
+    .small-icon {
+        width: 1rem;
+    }
+
+    /* Footer section */
+
+    footer {
+        background: url('./vectors/mobile_bottom_wave.svg') no-repeat center/contain;
+        aspect-ratio: 390/168;
+    }
+
+    footer > * {
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin: 0 5vw 5vw 5vw;
+
+        max-width: 50vw;
+        line-height: normal;
+    }
+}
