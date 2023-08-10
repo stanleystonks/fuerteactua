@@ -461,9 +461,9 @@ footer {
 
     /* Language icon */
     .lang-icon {
-        margin-right: 18vw;
+        margin-right: 17vw;
         margin-bottom: 4vw;
-        width: 5vw;
+        max-width: 5vw;
     }
 
     /* Main section */
