@@ -18,7 +18,6 @@ function updateLanguage() {
 
 function changeLanguage() {
     currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
-    console.log(currentLanguageIndex);
     updateLanguage();
 }
 
