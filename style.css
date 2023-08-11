@@ -460,9 +460,13 @@ footer {
 
     /* Language icon */
     .lang-icon {
-        margin-right: 17vw;
-        margin-bottom: 4vw;
+        margin-right: 18vw;
+        margin-bottom: 3.5vw;
         max-width: 5vw;
+    }
+
+    .black-line {
+        display: none;
     }
 
     /* Main section */
@@ -477,7 +481,7 @@ footer {
     
     .card {
         width: 100%;
-        padding: 8vw;
+        padding: 10vw;
 
         border-radius: 0;
     
@@ -494,7 +498,7 @@ footer {
         position: relative;
         bottom: 10vw;
 
-        padding: 8vw 0;
+        padding: 10vw 0;
     }
     
     /* Text */
@@ -505,8 +509,8 @@ footer {
 
     .artists h2 {
         margin-top: 10vw;
-        margin-left: 8vw;
-        margin-right: 8vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
     
     p {
@@ -548,8 +552,8 @@ footer {
     }
 
     .artists p {
-        margin-left: 8vw;
-        margin-right: 8vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
         order: 3;
     }
 
@@ -571,7 +575,7 @@ footer {
     /* Contact cards */
     .contact-card {
         min-height: 1.5rem;
-        margin-left: 8vw;
+        margin-left: 10vw;
     }
     
     .contact-card p {
@@ -596,15 +600,12 @@ footer {
 
     .nav-bottom {
         aspect-ratio: 390/168;
-        padding-bottom: 5vw;
+        padding: 0 10vw 5vw 10vw;        
     }
 
     .nav-bottom p, .nav-bottom a {
         font-size: 0.75rem;
         line-height: normal;
-    }
-
-    .black-line {
-        display: none;
+        margin: 0;
     }
 }
