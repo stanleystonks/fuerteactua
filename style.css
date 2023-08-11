@@ -7,15 +7,12 @@
     --black-6: #1F1E1F;
     --logo-white-white: #FFF;
     --accentorange: #E54800;
+    --font-size-base: 16px;
 }
 
 /* Utilities */
 .hidden {
     display: none;
-}
-
-.hidden-visibility {
-    visibility: hidden;
 }
 
 .visually-hidden {
@@ -40,7 +37,7 @@
 
 body {
     font-family: 'azo-sans-web', sans-serif;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     font-style: normal;
     line-height: normal;
 
@@ -165,15 +162,17 @@ main {
 }
 
 /* Text */
-h2 {
+h2, p {
     color: var(--logo-black, #121112);
+}
+
+h2 {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 2.5vw;
 }
 
 p {
-    color: var(--logo-black, #121112);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.875rem;
