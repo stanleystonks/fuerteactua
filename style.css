@@ -26,7 +26,6 @@
     border: 0;
   }
   
-
 /* Global settings */
 *, *::before, *::after {
     padding: 0;
@@ -81,18 +80,22 @@ header {
     position: relative;
     z-index: 1;
 
-    width: 100%;
-    aspect-ratio: 1440/209;
+    width: 80%;
+    aspect-ratio: calc(0.8 * 1440)/209;
+    margin: 0 auto;
+    padding-bottom: 2.25vw;
 
     display: flex;
     justify-content: flex-end;
     align-items: end;
 }
 
-.motto {
+.nav-top > * {
     flex: 1;
-    max-width: 25.5vw;
-    margin-bottom: 2.25vw;
+}
+
+.motto {
+    max-width: 25.75vw;
 
     color: var(--logo-grey, #F0EFF0);
     font-size: 1.375vw;
@@ -101,9 +104,7 @@ header {
 }
 
 .lang-icon {
-    flex: 1;
-    margin-right: 11.8vw;
-    margin-bottom: 2.25vw;
+    margin-right: 1.5vw;
     max-width: 2.75vw;
     background: url('./vectors/language_icon.svg') no-repeat center/contain;
     aspect-ratio: 41/38;
@@ -140,8 +141,8 @@ main {
     position: relative;
     bottom: 2.5vw;
 
-    width: 80vw;
-    margin: auto;
+    width: 80%;
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
@@ -184,7 +185,7 @@ p {
     text-decoration: none;
     cursor: pointer;
 
-    margin: 0 auto;
+    margin: 2.5vw auto 0 auto;
     padding: 0.85vw 1vw;
 
     display: inline-flex;
@@ -247,31 +248,33 @@ p {
     color: var(--black-6, #1F1E1F);
 }
 
+/* Image */
+.img {
+    display: none;
+}
+
 /* Contact */
 .contact-section {
     grid-area: contact;
-    margin: 5vw 0;
 
-    height: 5vw;
+    height: 15vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1vw;
 }
 
 /* Contact cards */
 .contact-card {
-    /* min-height: 2rem; */
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.contact-card p {
+.contact-card span {
     font-size: 1.25rem;
-    margin-bottom: 0;
     margin-left: 0.5rem;
 }
 
@@ -290,9 +293,6 @@ p {
 }
 
 /* Footer */
-
-
-
 footer {
     position: relative;
     grid-area: footer;
@@ -320,14 +320,15 @@ footer {
     position: relative;
     z-index: 1;
 
-    width: 100%;
-    aspect-ratio: 1440/162;
+    width: 80%;
+    aspect-ratio: calc(0.8 * 1440)/162;
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-end; 
 
-    padding: 0 10vw 2vw 10vw;
+    padding-bottom: 2vw;
 }
 
 .nav-bottom span {
@@ -348,39 +349,26 @@ footer {
 /* Tablet styles */
 @media only screen and (min-width: 681px) and (max-width: 965px) {
     /* Motto */
-    .motto {
-        max-width: 25.3vw;
-        margin-bottom: 2.5vw;
-        margin-left: 11vw;
-    
+    .motto {    
         font-size: 0.8rem;
-    }
-
-    /* Language icon */
-    .lang-icon {
-        margin-right: 11.75vw;
-        margin-bottom: 2.3vw;
-    }
-
-    .card {
-        padding: 5vw;
     }
 
     /* Text */
     h2 {
         font-size: 1.25rem;
-        margin-bottom: 5vw;
+        margin-bottom: 4vw;
     }
         
     p {
         line-height: 1.5rem;
-        margin-bottom: 3vw;
+        margin-bottom: 2vw;
     }
         
     /* Buttons */
     .button  {
         height: 3rem;
         padding: 0.85vw 3vw;
+        margin: 4vw auto 0 auto;
     }
     
     .button span {
@@ -394,7 +382,7 @@ footer {
     }
     
     /* Contact cards */
-    .contact-card p {
+    .contact-card span {
         font-size: 1rem;
         margin-left: 0.25rem;
     }
@@ -412,8 +400,7 @@ footer {
 
 /* Phone styles */
 @media only screen and (max-width: 680px) {
-    
-    /* Wave header */
+    /* Header */
     .svg-head {
         display: none;
     }
@@ -423,24 +410,21 @@ footer {
     }
 
     .nav-top {
-        aspect-ratio: 463/183;
+        aspect-ratio: calc(0.8 * 463)/183;
+        padding-left: 1.25vw;
+        padding-right: 1.25vw;
     }
-
 
     /* Motto */
     .motto {
         max-width: 100%;
-        margin-bottom: 3vw;
-        margin-left: 12.5vw;
-    
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     /* Language icon */
     .lang-icon {
-        margin-right: 18vw;
-        margin-bottom: 3.5vw;
         max-width: 5vw;
+        margin: 0;
     }
 
     .black-line {
@@ -459,7 +443,7 @@ footer {
     
     .card {
         width: 100%;
-        padding: 10vw;
+        padding: 10%;
 
         border-radius: 0;
     
@@ -467,28 +451,11 @@ footer {
         flex-direction: column;
         justify-content: space-between;
     }
-
-    .services {
-        background: var(--logo-white-white);
-    }
-
-    .artists {
-        position: relative;
-        bottom: 10vw;
-
-        padding: 10vw 0;
-    }
     
     /* Text */
     h2 {
         font-size: 1.25rem;
         margin-bottom: 6vw;
-    }
-
-    .artists h2 {
-        margin-top: 10vw;
-        margin-left: 10vw;
-        margin-right: 10vw;
     }
     
     p {
@@ -501,14 +468,12 @@ footer {
         height: 3rem;
         padding: 0.85vw 3vw;
 
-        position: relative;
-        top: 4vw;
+        margin: 6vw auto 0 auto;
 
-        z-index: 2;
+        z-index: 1;
     }
 
     .button span {
-        font-size: 1.5rem;
         top: 0.1rem;
     }
 
@@ -517,45 +482,58 @@ footer {
         width: 1.5rem;
     }
 
+    /* Individual cards */
+    .services {
+        background: var(--logo-white-white);
+    }
+
+    .artists {
+        position: relative;
+        bottom: 15vw;
+
+        padding: 10% 0;
+    }
+
     /* Reorder artists section */
     .img {
-        width: 100%;
         display: block;
+        width: 100%;
         order: 1;
     }
 
     .artists img {
-        height: 100%;
         width: 100%;
     }
 
+    .artists h2 {
+        margin-top: 1.5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     .artists p {
-        margin-left: 10vw;
-        margin-right: 10vw;
+        margin-left: 10%;
+        margin-right: 10%;
         order: 3;
     }
 
     .download-button {
         order: 2;
-        top: 10vw;
-        margin-bottom: 20vw;
+        margin-bottom: 10%;
     }
 
     /* Contact section */
     .contact-section {
-        margin: 10vw 0;
-    
-        height: 5vw;
-
         align-items: flex-start;
+        margin-bottom: 15vw;
     }
     
     /* Contact cards */
     .contact-card {
-        margin-left: 10vw;
+        margin-left: 10%;
     }
     
-    .contact-card p {
+    .contact-card span {
         font-size: 1rem;
         margin-left: 0.25rem;
     }
@@ -576,8 +554,7 @@ footer {
     }
 
     .nav-bottom {
-        aspect-ratio: 390/168;
-        padding: 0 10vw 5vw 10vw;        
+        aspect-ratio: calc(0.8 * 390)/168;        
     }
 
     .nav-bottom span, .nav-bottom a {
