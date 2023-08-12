@@ -419,6 +419,7 @@ footer {
     .motto {
         max-width: 100%;
         font-size: 0.8rem;
+        margin-left: 1vw;
     }
 
     /* Language icon */
