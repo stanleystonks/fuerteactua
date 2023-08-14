@@ -446,6 +446,11 @@ footer {
         display: none;
     }
 
+    video {
+        position: relative;
+        bottom: 1px;
+    }
+
     /* Main section */
     .main-section {
         bottom: 0vw;
