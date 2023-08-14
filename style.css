@@ -63,7 +63,9 @@ header {
     top: 0;
 
     width: 100%;
-    aspect-ratio: 1440/209;
+    aspect-ratio: 1000/136;
+
+    fill: none;
 }
 
 .svg-head-mobile {
@@ -71,9 +73,15 @@ header {
     top: 0;
 
     width: 100%;
-    aspect-ratio: 463/183;
+    aspect-ratio: 390/165;
+
+    fill: none;
 
     display: none;
+}
+
+#WORDS {
+    animation: slide-in 1.5s ease-in-out forwards;
 }
 
 .nav-top {
@@ -81,9 +89,9 @@ header {
     z-index: 1;
 
     width: 80%;
-    aspect-ratio: calc(0.8 * 1440)/209;
+    aspect-ratio: calc(0.8 * 1000)/136;
     margin: 0 auto;
-    padding-bottom: 2.25vw;
+    padding-bottom: 2.45vw;
 
     display: flex;
     justify-content: flex-end;
@@ -95,23 +103,28 @@ header {
 }
 
 .motto {
-    max-width: 25.75vw;
+    max-width: 25.8vw;
 
     color: var(--logo-grey, #F0EFF0);
     font-size: 1.375vw;
  
     font-weight: 350;
+
+    animation: fade-in 2.5s ease-in-out forwards;
 }
 
 .lang-icon {
-    margin-right: 1.5vw;
     max-width: 2.75vw;
     background: url('./vectors/language_icon.svg') no-repeat center/contain;
     aspect-ratio: 41/38;
 
+    margin-right: 0.4vw;
+
     cursor: pointer;
 
     transition: opacity 270ms;
+
+    animation: fade-in 2.5s ease-in-out forwards;
 }
 
 .lang-icon:hover {
@@ -172,7 +185,7 @@ h2 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
     line-height: 1.875rem;
     margin-bottom: 1.5vw;
@@ -304,6 +317,8 @@ footer {
 
     width: 100%;
     aspect-ratio: 1440/162;
+
+    fill: none;
 }
 
 .bottom-svg-mobile {
@@ -312,6 +327,8 @@ footer {
 
     width: 100%;
     aspect-ratio: 390/168;
+
+    fill: none;
 
     display: none;
 }
@@ -331,17 +348,16 @@ footer {
     padding-bottom: 2vw;
 }
 
-.nav-bottom span {
+.nav-bottom > * {
     font-size: 1rem;
     font-weight: 400;
+}
 
+.nav-bottom span {
     color: var(--logo-grey, #F0EFF0);
 }
 
 .nav-bottom a {
-    font-size: 1rem;
-    font-weight: 400;
-
     color: var(--accentorange, #E54800);
     text-decoration: none;
 }
@@ -350,7 +366,7 @@ footer {
 @media only screen and (min-width: 681px) and (max-width: 965px) {
     /* Motto */
     .motto {    
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     /* Text */
@@ -360,6 +376,7 @@ footer {
     }
         
     p {
+        font-size: 1rem;
         line-height: 1.5rem;
         margin-bottom: 2vw;
     }
@@ -393,7 +410,7 @@ footer {
     }
 
     /* Footer */
-    .nav-bottom span, .nav-bottom a {
+    .nav-bottom > * {
         font-size: 0.75rem;
     }
 }
@@ -410,22 +427,19 @@ footer {
     }
 
     .nav-top {
-        aspect-ratio: calc(0.8 * 463)/183;
-        padding-left: 1.25vw;
-        padding-right: 1.25vw;
+        aspect-ratio: calc(0.8 * 390)/165;
     }
 
     /* Motto */
     .motto {
         max-width: 100%;
         font-size: 0.8rem;
-        margin-left: 1vw;
     }
 
     /* Language icon */
     .lang-icon {
         max-width: 5vw;
-        margin: 0;
+        margin-right: 6.5vw;
     }
 
     .black-line {
@@ -460,6 +474,7 @@ footer {
     }
     
     p {
+        font-size: 1rem;
         line-height: 1.5rem;
         margin-bottom: 4vw;
     }
@@ -490,7 +505,7 @@ footer {
 
     .artists {
         position: relative;
-        bottom: 15vw;
+        bottom: calc(10vw + 1.5rem);
 
         padding: 10% 0;
     }
@@ -499,6 +514,7 @@ footer {
     .img {
         display: block;
         width: 100%;
+        aspect-ratio: 390/231;
         order: 1;
     }
 
@@ -520,7 +536,7 @@ footer {
 
     .download-button {
         order: 2;
-        margin-bottom: 10%;
+        margin-bottom: 10vw;
     }
 
     /* Contact section */
@@ -558,7 +574,28 @@ footer {
         aspect-ratio: calc(0.8 * 390)/168;        
     }
 
-    .nav-bottom span, .nav-bottom a {
+    .nav-bottom > * {
         font-size: 0.75rem;
+    }
+}
+
+/* Keyframes */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
