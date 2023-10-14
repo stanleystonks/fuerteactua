@@ -1,0 +1,111 @@
+button {
+    font-weight: 500;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.text-white {
+    color: var(--default-white-50);
+    font-size: bold;
+}
+
+.default-white {
+    background: var(--default-white-50);
+}
+
+/* Buttons */
+
+/* Super Button 1 */
+.super-button {
+    --color: var(--default-white-50);
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 300;
+    font-size: 1rem;
+    border: 1px solid;
+    font-family: inherit;
+    /* text-transform: uppercase; */
+    color: var(--color);
+    z-index: 1;
+}
+   
+.super-button::before, .super-button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+   
+.super-button::before {
+    top: -1em;
+    left: -1em;
+}
+   
+.super-button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+   
+.super-button:hover::before, .super-button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+   
+.super-button:hover {
+    color: var(--default-black-900);
+}
+   
+.super-button:active {
+    filter: brightness(.7);
+}
+
+/* Additional button properties */
+
+.no-border {
+    border: none;
+}
+
+.button-invert {
+    --color: var(--default-black-900);
+}
+
+.button-black {
+    background-color: var(--default-black-900);
+}
+
+.button-invert:hover {
+    color: var(--default-white-50);
+}
+   
+.submit-button {
+    width: max-content;
+    margin: 0 auto;
+}
+
+@media (max-width: 460px) {
+    .submit-button {
+        width: 100%;
+    }
+}
+
+.lang-icon-button {
+    background: url('../media/images/earth-europe-solid.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 1.5rem;
+    aspect-ratio: 1;
+}

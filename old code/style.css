@@ -1,0 +1,606 @@
+@import url("https://use.typekit.net/xrw2yvk.css");
+
+/* Variables */
+:root {
+    --logo-grey: #F0EFF0;
+    --logo-black: #121112;
+    --black-6: #1F1E1F;
+    --logo-white-white: #FFF;
+    --accentorange: #E54800;
+    --font-size-base: 16px;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  
+/* Global settings */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'azo-sans-web', sans-serif;
+    font-size: var(--font-size-base);
+    font-style: normal;
+    line-height: normal;
+
+    /* Global grid */
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "contact"
+        "footer"
+}
+
+/* Header */
+header {
+    position: relative;
+    grid-area: header;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.svg-head {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    aspect-ratio: 1000/136;
+
+    fill: none;
+}
+
+.svg-head-mobile {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    aspect-ratio: 390/165;
+
+    fill: none;
+
+    display: none;
+}
+
+#WORDS {
+    animation: slide-in 1.5s ease-in-out forwards;
+}
+
+.nav-top {
+    position: relative;
+    z-index: 1;
+
+    width: 80%;
+    aspect-ratio: calc(0.8 * 1000)/136;
+    margin: 0 auto;
+    padding-bottom: 2.45vw;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.nav-top > * {
+    flex: 1;
+}
+
+.motto {
+    max-width: 25.8vw;
+
+    color: var(--logo-grey, #F0EFF0);
+    font-size: 1.375vw;
+ 
+    font-weight: 350;
+
+    animation: fade-in 2.5s ease-in-out forwards;
+}
+
+.lang-icon {
+    max-width: 2.75vw;
+    background: url('./vectors/language_icon.svg') no-repeat center/contain;
+    aspect-ratio: 41/38;
+
+    margin-right: 0.4vw;
+
+    cursor: pointer;
+
+    transition: opacity 270ms;
+
+    animation: fade-in 2.5s ease-in-out forwards;
+}
+
+.lang-icon:hover {
+    opacity: 0.8;
+}
+
+.lang-icon:active {
+    opacity: 0.5;
+}
+
+.black-line {
+    height: 5vw;
+    width: 100%;
+    background-color: var(--logo-black);
+}
+
+video {
+    width: 100%;
+}
+
+/* Main */
+main {
+    grid-area: main;
+}
+
+.main-section {
+    position: relative;
+    bottom: 2.5vw;
+
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: var(--logo-grey);
+    width: 35vw;
+    padding: 5vw;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Text */
+h2, p {
+    color: var(--logo-black, #121112);
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2.5vw;
+}
+
+p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    margin-bottom: 1.5vw;
+}
+
+/* Buttons */
+.button  {
+    height: 4.5rem;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    margin: 2.5vw auto 0 auto;
+    padding: 0.85vw 1vw;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.07), 3px 3px 3px 0px rgba(0, 0, 0, 0.05), 5px 5px 5px 0px rgba(255, 255, 255, 0.04) inset, 3px 3px 3px 0px rgba(252, 252, 252, 0.08) inset;
+
+    transition: opacity 270ms;
+}
+
+/* Button pseudo-classes */
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    opacity: 0.5;
+}
+
+/* Individual buttons */
+.call-button  {
+    background: var(--black-6, #1F1E1F);
+}
+
+.download-button  {
+    background: var(--logo-white-white, #FFF);
+}
+
+/* Main icons */
+.icon {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+}
+
+.phone-icon {
+    background: url('./vectors/phone_icon.svg') no-repeat center/contain;
+}
+
+.catalogue-icon {
+    background: url('./vectors/catalogue_icon.svg') no-repeat center/contain;
+}
+
+/* Links */
+.button span {
+    position: relative;
+    top: 0.2rem;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.call-us {
+    color: var(--logo-grey, #F0EFF0);
+}
+
+.download {
+    color: var(--black-6, #1F1E1F);
+}
+
+/* Image */
+.img {
+    display: none;
+}
+
+/* Contact */
+.contact-section {
+    grid-area: contact;
+
+    height: 15vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+/* Contact cards */
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-card span {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+/* Contact icons */
+.small-icon {
+    width: 1.5rem;
+    aspect-ratio: 1 / 1;
+}
+
+.phone-icon2 {
+    background: url('./vectors/phone_icon2.svg') no-repeat center/contain;
+}
+
+.email-icon {
+    background: url('./vectors/email_icon.svg') no-repeat center/contain;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    grid-area: footer;
+}
+
+.bottom-svg {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    aspect-ratio: 1440/162;
+
+    fill: none;
+}
+
+.bottom-svg-mobile {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    aspect-ratio: 390/168;
+
+    fill: none;
+
+    display: none;
+}
+
+.nav-bottom {
+    position: relative;
+    z-index: 1;
+
+    width: 80%;
+    aspect-ratio: calc(0.8 * 1440)/162;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+
+    padding-bottom: 2vw;
+}
+
+.nav-bottom > * {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nav-bottom span {
+    color: var(--logo-grey, #F0EFF0);
+}
+
+.nav-bottom a {
+    color: var(--accentorange, #E54800);
+    text-decoration: none;
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 681px) and (max-width: 965px) {
+    /* Motto */
+    .motto {    
+        font-size: 0.75rem;
+    }
+
+    /* Text */
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 4vw;
+    }
+        
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 2vw;
+    }
+        
+    /* Buttons */
+    .button  {
+        height: 3rem;
+        padding: 0.85vw 3vw;
+        margin: 4vw auto 0 auto;
+    }
+    
+    .button span {
+        font-size: 1rem;
+        top: 0.1rem;
+    }
+    
+    /* Main icons */
+    .icon {
+        width: 1.5rem;
+    }
+    
+    /* Contact cards */
+    .contact-card span {
+        font-size: 1rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* Contact icons */
+    .small-icon {
+        width: 1rem;
+    }
+
+    /* Footer */
+    .nav-bottom > * {
+        font-size: 0.75rem;
+    }
+}
+
+/* Phone styles */
+@media only screen and (max-width: 680px) {
+    /* Header */
+    .svg-head {
+        display: none;
+    }
+
+    .svg-head-mobile {
+        display: block;
+    }
+
+    .nav-top {
+        aspect-ratio: calc(0.8 * 390)/165;
+    }
+
+    /* Motto */
+    .motto {
+        max-width: 100%;
+        font-size: 0.8rem;
+    }
+
+    /* Language icon */
+    .lang-icon {
+        max-width: 5vw;
+        margin-right: 6.5vw;
+    }
+
+    .black-line {
+        display: none;
+    }
+
+    video {
+        position: relative;
+        bottom: 1px;
+    }
+
+    /* Main section */
+    .main-section {
+        bottom: 0vw;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        padding: 10%;
+
+        border-radius: 0;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    /* Text */
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 6vw;
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 4vw;
+    }
+    
+    /* Buttons */
+    .button  {
+        height: 3rem;
+        padding: 0.85vw 3vw;
+
+        margin: 6vw auto 0 auto;
+
+        z-index: 1;
+    }
+
+    .button span {
+        top: 0.1rem;
+    }
+
+    /* Main icons */
+    .icon {
+        width: 1.5rem;
+    }
+
+    /* Individual cards */
+    .services {
+        background: var(--logo-white-white);
+    }
+
+    .artists {
+        position: relative;
+        bottom: calc(10vw + 1.5rem);
+
+        padding: 10% 0;
+    }
+
+    /* Reorder artists section */
+    .img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 390/231;
+        order: 1;
+    }
+
+    .artists img {
+        width: 100%;
+    }
+
+    .artists h2 {
+        margin-top: 1.5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .artists p {
+        margin-left: 10%;
+        margin-right: 10%;
+        order: 3;
+    }
+
+    .download-button {
+        order: 2;
+        margin-bottom: 10vw;
+    }
+
+    /* Contact section */
+    .contact-section {
+        align-items: flex-start;
+        margin-bottom: 15vw;
+    }
+    
+    /* Contact cards */
+    .contact-card {
+        margin-left: 10%;
+    }
+    
+    .contact-card span {
+        font-size: 1rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* Contact icons */
+    .small-icon {
+        width: 1rem;
+    }
+
+    /* Footer section */
+
+    .bottom-svg {
+        display: none;
+    }
+
+    .bottom-svg-mobile {
+        display: block;
+    }
+
+    .nav-bottom {
+        aspect-ratio: calc(0.8 * 390)/168;        
+    }
+
+    .nav-bottom > * {
+        font-size: 0.75rem;
+    }
+}
+
+/* Keyframes */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

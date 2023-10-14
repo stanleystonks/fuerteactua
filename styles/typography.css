@@ -1,0 +1,49 @@
+/* Headings */
+h2 {
+    /* margin-top: 2rem; */
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+
+p {
+    /* margin: 1.5rem 0 1rem 0; */
+    font-weight: 100;
+    /* font-size: 1.25rem; */
+    line-height: 2.25rem;
+}
+
+textarea {
+    margin-bottom: 1rem;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+
+
+a {
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.little-icon {
+    margin-right: 1rem;
+}
+
+.little-icon-2 {
+    margin-left: 1rem;
+}
+
+
+.footer-text {
+    font-weight: 100;
+    font-size: 0.75rem;
+}
+
+.italic {
+    font-style: italic;
+}
