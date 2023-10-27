@@ -7,10 +7,9 @@
     <title>Fuerteactua: Arte y Entretenimiento Premium en Fuerteventura</title>
     <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
     <script src="https://kit.fontawesome.com/9310126803.js" crossorigin="anonymous"></script>
-    <script src="./script.js" defer></script>
     <script src="./nav.js" defer></script>
     <script src="./header.js" defer></script>
-    <link rel="stylesheet" href="./styles/globals.css">
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/buttons.css">
     <link rel="stylesheet" href="./styles/typography.css">
@@ -24,7 +23,7 @@
     <!-- Sticky Nav -->
     <nav class="flex between-center">
         <!-- Logo -->
-        <div data-expanded="false" class="logo-div flex center-center">
+        <div class="logo-div flex center-center">
             <a class="flex center-center" href="#">
                 <svg class="desktop-logo" viewBox="0 0 426 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="LOGO">
@@ -42,10 +41,9 @@
                     <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M227.914 31.8622C234.715 31.8622 240.227 26.1098 240.227 19.014C240.227 11.9181 234.715 6.16577 227.914 6.16577C221.114 6.16577 215.602 11.9181 215.602 19.014C215.602 26.1098 221.114 31.8622 227.914 31.8622ZM223.421 27.2378L236.828 19.0136L223.421 10.7894L223.421 27.2378Z" fill="#F2F2F2"/>
                     </g>
                 </svg>
-                <svg class="mobile-logo target-link" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="mobile-logo" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M12.9144 25.8622C19.7146 25.8622 25.2273 20.1098 25.2273 13.014C25.2273 5.91811 19.7146 0.165771 12.9144 0.165771C6.11422 0.165771 0.601562 5.91811 0.601562 13.014C0.601562 20.1098 6.11422 25.8622 12.9144 25.8622ZM8.4213 21.2378L21.8281 13.0136L8.4213 4.78938L8.4213 21.2378Z" fill="#F2F2F2"/>
-                </svg>
-                    
+                </svg>   
             </a>
         </div>
 
@@ -57,23 +55,23 @@
             <li><a class="target-link" data-en-text="About" data-de-text="Über uns" href="#about">Acerca de</a></li>
             <li><a class="target-link" data-en-text="Shows" data-de-text="Shows" href="#artists">Espectáculos</a></li>
             <li><a class="target-link" data-en-text="Contact" data-de-text="Kontakt" href="#contact">Contacto</a></li>
-           
-            <!-- Language Icon -->
-            <li>
-                <button aria-expanded="false" aria-controls="lang-navigation" class="lang-icon-button">
-                    <span class="sr-only">Language Menu</span>
-                    <ul data-mobile="true" data-visible="false" class="lang-navigation flex-column content-between">
-                        <li><a href="#">Español</a></li>
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Deutsch</a></li>
-                    </ul>
+
+            <!-- Language Menu -->
+            <li class="dropdown" data-dropdown>
+                <button class="link lang-button" aria-controls="language-navigation" aria-expanded="false" data-dropdown-button>
+                    <span class="sr-only">Menú de Idioma</span>
                 </button>
+                <ul id="language-navigation" class="dropdown-menu lang-menu flex-column content-between">
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                </ul>
             </li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header class="flex-column-special">
+    <header id="hero" class="flex-column between-center">
         <!-- Image Overlay -->
         <img class="overlay" src="./media/images/VIDEO OVERLAY.png" alt="">
 
@@ -127,7 +125,7 @@
             <!-- Contact Info -->
             <div class="contact-info flex-column content-between">
                 <div>
-                    <h2>Contact</h2>
+                    <h2>Contacto</h2>
                     <p>Ya sea que tengas preguntas, comentarios o quieras saber más, estamos aquí para ayudarte. Valoramos la comunicación abierta y buscamos brindar una experiencia fluida a nuestros visitantes. Contáctanos a través de los métodos proporcionados y responderemos rápidamente.</p>
                 </div>
                 <div>
@@ -135,7 +133,7 @@
                     <p>fuerteactua@gmail.com</p>
                 </div>
                 <div>
-                    <h3>Phone Number</h2>
+                    <h3>Teléfono</h2>
                     <p>1234567989</p>
                 </div> 
 
@@ -146,16 +144,16 @@
             <!-- Contact Form -->
             <form class="contact-form flex-column content-between" action="submit.php" method="post">
                 <div>
-                    <label for="name">Name</label>
-                    <input class="input-field" id="name" type="text" name="name" placeholder="Your Name" required>
+                    <label for="name">Nombre</label>
+                    <input class="input-field" id="name" type="text" name="name" placeholder="Ingrese su nombre" required>
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" required>
+                    <input class="input-field" id="email" type="email" name="email" placeholder="Ingrese su correo electrónico" required>
                 </div>
                 <div>                   
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="7" cols="33" required></textarea>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="7" cols="33" placeholder="Escriba su mensaje aquí..." required></textarea>
                 </div>
 
                 <!-- Submit Button -->
@@ -193,7 +191,7 @@
 
         <!-- Footer Info -->
         <div class="footer-info flex items-center footer-text">
-            <span>&copy; FuerteActua 2023|2024. Powered by PixKitchen.</span>
+            <span>&copy; FuerteActua 2023|2024. Desarrollado por PixKitchen.</span>
         </div>
     </footer>
 </body>

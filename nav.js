@@ -1,8 +1,6 @@
 const primaryNav = document.querySelector('.nav-list');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const logo = document.querySelector('.logo-div');
-const langMenu = document.querySelector('.lang-navigation');
-const langButton = document.querySelector('.lang-icon-button');
 
 const targetLinks = document.querySelectorAll('.target-link');
 
@@ -23,28 +21,12 @@ const menuToggle = () => {
     }
 }
 
-let langVisibility;
-let isMobile;
-
-const langToggle = () => {
-    langVisibility = langMenu.getAttribute('data-visible');
-    isMobile = langMenu.getAttribute('data-mobile');
-    console.log(langVisibility)
-    if (langVisibility === 'false' && isMobile === 'true') {
-        langMenu.setAttribute('data-visible', "true");
-        langMenu.setAttribute('data-mobile', 'false');
-        langButton.setAttribute('aria-expanded', "true");
-    } else if (langVisibility === 'true' && isMobile === 'false') {
-        langMenu.setAttribute('data-visible', "false");
-        langMenu.setAttribute('data-mobile', 'true');
-        langButton.setAttribute('aria-expanded', "false");
-    } else {
-        return;
-    }
-}
-
 navToggle.addEventListener('click', menuToggle);
-langButton.addEventListener('click', langToggle);
+
+logo.addEventListener('click', () => {
+    location.href = '/';
+    // location.reload();
+})
 
 targetLinks.forEach((link) => {
     link.addEventListener('click', menuToggle);
