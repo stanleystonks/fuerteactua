@@ -6,11 +6,71 @@
     }
 }
 
-/* Mobile Menus */
+/* Mobile/Tablet View */
 @media (max-width: 960px) {
-    /* Reorder Hero Section */
+    /* Mobile Logo Change - Medium Screens */
+    @media (max-width: 690px) {
+        .mobile-logo {
+            display: block;
+        }
+
+        .desktop-logo {
+            display: none;
+        }
+
+        .logo-div {
+            max-width: 5vh;
+            z-index: 9998;
+
+            transform: translateX(0);
+            transition: transform 350ms ease-out;
+        }
+
+        .logo-div[data-expanded="true"] {
+            margin: 0;
+            transform: translateX(calc(30vw + 2rem));
+        }
+    }
+
+    /* Re-render Hero Section */
     #hero {
         justify-content: center;
+    }
+
+    .hero-heading {
+        display: block;
+    }
+
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%); 
+        
+        height: 100%; 
+        
+        filter: blur(2.5rem); 
+        
+        object-fit: cover; 
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .hero-buttons {
+        margin-top: 2rem;
+    }
+
+    /* Mobile Specific Hero Buttons */
+    @media (max-width: 460px) {
+        .hero-buttons {
+            flex-direction: column;
+            --gap: 1rem;
+    
+            margin-top: 4rem;
+        }
     }
 
     /* Mobile Lang Menu */
@@ -78,70 +138,8 @@
     .mobile-nav-toggle[aria-expanded="true"] {
         background-image: url('../media/images/xmark-solid.svg');
     }
-}
 
-/* Mobile Logo Change */
-@media (max-width: 690px) {
-    .mobile-logo {
-        display: block;
-    }
-
-    .desktop-logo {
-        display: none;
-    }
-
-    .logo-div {
-        max-width: 5vh;
-        z-index: 9998;
-
-        transform: translateX(0);
-        transition: transform 350ms ease-out;
-    }
-
-    .logo-div[data-expanded="true"] {
-        margin: 0;
-        transform: translateX(calc(30vw + 2rem));
-    }
-}
-
-
-@media (max-width: 960px) {
-    .hero-heading {
-        display: block;
-    }
-
-    .hero-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* This centers the video */
-        
-        height: 100%; /* This makes the video stretch to the full height of its parent */
-        
-        filter: blur(2.5rem); /* This applies the blur effect */
-        object-fit: cover; /* This ensures the video covers the full height and width of its container */
-    }
-
-    .overlay {
-        display: none;
-    }
-
-    .hero-buttons {
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 460px) {
-    .hero-buttons {
-        flex-direction: column;
-        --gap: 1rem;
-
-        margin-top: 4rem;
-    }
-}
-
-
-@media (max-width: 960px) {
+    /* Main Section */
     .introduction {
         width: 80%;
     }
@@ -154,6 +152,7 @@
         height: 35rem;
     }
 
+    /* FIX!!! */
     .discover-artists {
         width: 80%;
 
@@ -163,9 +162,8 @@
     .card-discover {
         padding: 2rem 0;
     }
-}
 
-@media (max-width: 960px) {
+    /* Contact Section */
     .contact-section {
         width: 80%;
 
@@ -183,25 +181,23 @@
     .contact-info {
         text-align: center;
     }
-}
 
-@media (max-width: 460px) {
-    .download-button {
-        width: 100%;
+    /* Small Screen Specifics */
+    @media (max-width: 460px) {
+        .download-button {
+            width: 100%;
+        }
+    
+        .artists > * {
+            width: 80%;
+        }
+    
+        .call-button {
+            width: 100%;
+        }
     }
 
-    .artists > * {
-        width: 80%;
-    }
-
-    .call-button {
-        width: 100%;
-    }
-}
-
-
-
-@media (max-width: 960px) {
+    /* Footer Section */
     footer {
         padding-block: 5%;
     }

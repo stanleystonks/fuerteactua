@@ -20,6 +20,7 @@
 /* Body Element */
 body {
     overflow-x: hidden;
+
     min-height: 100vh;
 
     background: var(--background);
@@ -155,11 +156,15 @@ nav > * {
 
 .nav-list li a {
     color: var(--default-white-50);
-    text-decoration: none;
+    opacity: 1;
+
+    transition: opacity 350ms ease-out;
 }
 
 .nav-list li a:hover {
     text-decoration: underline;
+
+    opacity: 0.75;
 }
 
 /* Mobile Hamburger */
@@ -183,8 +188,6 @@ nav > * {
 
     left: -100%;
 }
-
-
 
 /* Hero-Section */
 header {
@@ -224,7 +227,6 @@ header {
     color: var(--default-white-50);
 }
 
-
 /* Main */
 .about-section {
     padding-top: 6rem;
@@ -242,7 +244,6 @@ header {
     width: 85%;
 }
 
-
 /* Artists */
 .artists {
     width: 100%;
@@ -255,6 +256,7 @@ header {
     background-repeat: no-repeat;
 }
 
+/* FIX!!! */
 .card-discover {
     padding: 2rem 4rem;
 }
@@ -275,10 +277,6 @@ header {
     border-radius: 0.625rem;
     background: white;
 }
-
-
-
-
 
 /* Contact */
 .contact-section {
@@ -336,5 +334,3 @@ footer {
 
     color: var(--default-white-50);
 }
-
-
