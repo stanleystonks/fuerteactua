@@ -23,11 +23,6 @@ const menuToggle = () => {
 
 navToggle.addEventListener('click', menuToggle);
 
-// logo.addEventListener('click', () => {
-//     location.href = '/';
-//     // location.reload();
-// })
-
 targetLinks.forEach((link) => {
     link.addEventListener('click', menuToggle);
 })
