@@ -398,6 +398,8 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
+
+    aspect-ratio: 1920 / 720;
 }
 
 .hero-heading {
@@ -578,6 +580,12 @@ footer {
     .scrolled {
         background: hsl(0 0% 0% / 0.72);
         backdrop-filter: blur(1rem); 
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        padding-bottom: 2rem;
     }
 }
 
